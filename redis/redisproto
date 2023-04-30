@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+redis-server &
+sleep 5s
+./proto.rb | redis-cli --pipe
+redis-cli shutdown
